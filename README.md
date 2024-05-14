@@ -1,6 +1,16 @@
 # jaybot
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a chatbot for answering questions about Jay R. Smith Terms and Conditions.
+
+## Todo
+
+[x] Vue Project Init
+[x] Groq API keygen
+[ ] Basic functionality
+[ ] Attach to API
+[ ] Add Bootstrap
+[ ] Style 
+
 
 ## Recommended IDE Setup
 
