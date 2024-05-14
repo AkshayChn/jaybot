@@ -23,9 +23,8 @@ async function getNewResponse() {
     model: 'llama3-8b-8192',
   });
 
-  //console.log(chatCompletion.choices[0].message.content);
   return chatCompletion.choices[0].message.content
-  //return "LLM stands for Low Latency Logistic Management, which refers to the process of managing and optimizing the movement of goods and materials with a focus on reducing the time it takes for these items to move through the supply chain. Low latency is important in logistics management for several reasons: 1. Improved customer satisfaction: In today's fast-paced business environment, customers expect their orders to be delivered quickly and accurately. Low latency LLMs help ensure that orders are fulfilled on time, which can lead to increased customer satisfaction and loyalty. 2. Increased efficiency: Low latency LLMs help reduce the time it takes for goods and materials to move through the supply chain, which can lead to increased efficiency and productivity. This is because goods and materials are available for use or sale more quickly, which can reduce the amount of time and resources needed to manage inventory. 3."
+//   return "<example answer to your question.>" + question_string.value
 }
 
 
@@ -39,7 +38,7 @@ async function getIntro() {
 
   //console.log(chatCompletion.choices[0].message.content);
   return chatCompletion.choices[0].message.content
-  //return "LLM stands for Low Latency Logistic Management, which refers to the process of managing and optimizing the movement of goods and materials with a focus on reducing the time it takes for these items to move through the supply chain. Low latency is important in logistics management for several reasons: 1. Improved customer satisfaction: In today's fast-paced business environment, customers expect their orders to be delivered quickly and accurately. Low latency LLMs help ensure that orders are fulfilled on time, which can lead to increased customer satisfaction and loyalty. 2. Increased efficiency: Low latency LLMs help reduce the time it takes for goods and materials to move through the supply chain, which can lead to increased efficiency and productivity. This is because goods and materials are available for use or sale more quickly, which can reduce the amount of time and resources needed to manage inventory. 3."
+//   return "<Hi I am example Jay!>"
 }
 
 const first_message = await getIntro();
@@ -54,16 +53,38 @@ async function setM (){
 </script>
 
 <template>
-    
-    <h4>{{ first_message }}</h4>
 
-    <div>
-    <input type="text" placeholder="Enter your question here" v-model="question_string" >
-    
-    <button @click="setM">Go!</button>
+<div class="p-5 text-center">
+  <h1>JayBot Virtual Assistant</h1>
+  <p>Using Retrieval-augmented generation</p>
+  <p>Answers to questions pertaining to <a href="https://www.jrsmith.com/uploads/fileLibrary/PG-24-Terms-and-Conditions.pdf">Jay R. Smith T&C PDF.</a></p> 
+</div>
+
+<div class="container-sm" style="max-width: 600px;">
+    <div class="row ">
+        <p>{{ first_message }}</p>
     </div>
-    <p>{{ message }}</p>
 
 
+    <div class="row">
+        <div class="col-sm-10">
+            <input class="form-control" type="text" placeholder="Enter your question here" v-model="question_string" >
+        </div>   
+        <div class="col-sm-1">
+            <button class="btn btn-primary" @click="setM">Go!</button>
+            <p></p>
+        </div>   
+    </div>
+
+    <div class="row">
+        <h6>Answers:</h6>
+    </div>       
+    <div class="row">
+        <div class="col">
+            <p>{{ message }}</p>
+        </div>
+    </div>
+
+ </div>
 
 </template>
