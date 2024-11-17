@@ -1,6 +1,10 @@
 # jaybot
 
+<<<<<< new-branch
+New line in new-branch.
+======
 New line in `main` branch. This should create a conflict.
+>>>>>> main
 
 This is a chatbot for answering questions about Jay R. Smith Terms and Conditions.
 
