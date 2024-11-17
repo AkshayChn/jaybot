@@ -1,5 +1,7 @@
 # jaybot
 
+New line in `main` branch. This should create a conflict.
+
 This is a chatbot for answering questions about Jay R. Smith Terms and Conditions.
 
 ## Todo
